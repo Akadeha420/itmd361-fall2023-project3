@@ -1,0 +1,129 @@
+/* navbar */
+#links {
+  background-color: #0077b6;
+  overflow: hidden;
+}
+
+.links-container {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.links-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  float: left;
+}
+
+.links-container ul li {
+  float: left;
+  position: relative;
+  right: 50%;
+  display: block;
+}
+
+.links-container ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#links ul li a:hover {
+  background-color: #000;
+}
+
+/* Resume Design */
+
+section {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 50px;
+  box-sizing: border-box;
+  min-height: fit-content;
+  border-bottom: 1px solid black;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+}
+
+#resume-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  display: flex;
+  margin: auto 0;
+}
+
+.profile-image img {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.profile-text {
+  align-self: center;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.profile-text h2 {
+  text-align: center;
+}
+
+.profile-text p {
+  text-align: center;
+  text-decoration: none;
+}
+
+.profile-socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.profile-socials a {
+  font-size: 25px;
+  height: 25px;
+  padding: 5px;
+}
+.about-info {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.job {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Origins CSS */
+
+#aboutme img, video {
+  height: 250px;
+  width: 250px;
+  border-radius: 10%;
+}
+
+.interests-travel {
+  padding-bottom: 25px;
+  border-bottom: 0.5px dashed black;
+}
+
+.travel-visuals {
+  display: flex;
+  justify-content: center;
+}
+.games-visuals {
+  display: flex;
+  justify-content: center;
+}
+

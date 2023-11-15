@@ -18,34 +18,33 @@ document.addEventListener('DOMContentLoaded', function () {
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
 
-  let currentIndex = 0;
+  let current = 0;
 
   function pictureSlider(index) {
       if (index < 0) {
-          currentIndex = ngapali.children.length - 1;
+          current = ngapali.children.length - 1;
       } 
       else if (index < ngapali.children.length) {
-          currentIndex = index;
+          current = index;
       } 
       else {
-          currentIndex = 0;
+          current = 0;
       }
 
       for (let i = 0; i < ngapali.children.length; i++) {
           ngapali.children[i].style.visibility = 'hidden';
       }
-
-      ngapali.children[currentIndex].style.visibility = 'visible';
+      ngapali.children[current].style.visibility = 'visible';
 
   }
 
   previous.addEventListener('click', function () {
-      pictureSlider(currentIndex - 1);
+      pictureSlider(current - 1);
   });
 
   next.addEventListener('click', function () {
-      pictureSlider(currentIndex + 1);
+      pictureSlider(current + 1);
   });
 
-  pictureSlider(currentIndex)
+  pictureSlider(current)
 })

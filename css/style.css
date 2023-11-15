@@ -127,3 +127,22 @@ section {
   justify-content: center;
 }
 
+/* Ngapali CSS */
+.ngapali-visuals {
+  display: flex;
+  justify-content: center;
+}
+
+.ngapali-visuals img{
+  height: 250px;
+  width: 250px;
+}
+
+.ngapali-button {
+  display: flex;
+  justify-content: center;
+}
+
+.ngapali-button button {
+  width: 100px;
+}

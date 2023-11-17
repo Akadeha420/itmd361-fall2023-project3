@@ -146,3 +146,15 @@ section {
 .ngapali-button button {
   width: 100px;
 }
+
+/* To-do List CSS */
+
+.list ul li {
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.list ul li.checked {
+  text-decoration: line-through;
+}

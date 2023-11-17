@@ -6,40 +6,36 @@
   <title>To Do List</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="javascript/script.js"></script>
 </head>
 
 <body>
-  <div class="page-wrapper-todo">
-    <nav id="links">
-      <div class="links-container">
-        <ul>
-          <li><a href="index.html">Resume</a></li>
-          <li><a href="aboutme.html">Origins</a></li>
-          <li><a href="todo.html">To-do List</a></li>
-          <li><a href="map.html">Map</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="wrapper-add-task">
-      <div class="add-task">
-        <section>
-          <h1>Simple To Do List</h1>
-          <input type="text" id="tasks" placeholder="Add your task">
-          <button>Submit</button>
-        </section>
-      </div>
+  <nav id="links">
+    <div class="links-container">
+      <ul>
+        <li><a href="index.html">Resume</a></li>
+        <li><a href="aboutme.html">Origins</a></li>
+        <li><a href="todo.html">To-do List</a></li>
+        <li><a href="map.html">Map</a></li>
+      </ul>
     </div>
-    <div class="wrapper-tasks">
-      <div class="tasks">
-        <ul>
-          <li>Task 1</li>
-          <li>Task 2</li>
-          <li>Task 3</li>
-        </ul>
-      </div>
+  </nav>
+  <section class="wrapper-add-task">
+    <div class="add-task">
+      <h1>Simple To Do List</h1>
+      <form action="todo.html" id="form">
+        <input type="text" id="tasks" placeholder="Add your task">
+        <button>Submit</button>
+      </form>
     </div>
-  </div>
+    <div class="list">
+      <ul id="todo">
+        <!-- <li class="checked">Task 1</li>
+        <li>Task2</li>
+        <li>Task 3</li> -->
+      </ul>
+    </div>
+  </section>
+  <script src="javascript/script.js"></script>
 </body>
 
 </html>

@@ -48,3 +48,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   pictureSlider(current)
 })
+
+// To Do List
+const form = document.getElementById('form')
+const text = document.getElementById('tasks')
+const list = document.getElementById('todo')
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
+  let todoList = document.createElement('li')
+  todoList.innerHTML = text.value
+  list.append(todoList)
+  text.value = ''
+  reload()
+})
+
+list.addEventListener('click', function(e) {
+  if(e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+    reload()
+  }
+},false)
+
+function reload() {
+  localStorage.setItem('data', list.innerHTML)
+}
+
+function save() {
+  list.innerHTML = localStorage.getItem('data')
+}
+
+save();

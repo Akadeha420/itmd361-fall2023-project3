@@ -150,27 +150,12 @@ section {
 
 /* To-do List CSS */
 
-.list ul {
-  display: block;
-}
-
 .list ul li {
-  content: '';
   padding: 10px;
   user-select: none;
   cursor: pointer;
 }
 
-.list ul li span.checked {
+.list ul li.checked {
   text-decoration: line-through;
-}
-
-.list ul li span.removeText {
-  padding: 5px;
-  position: absolute;
-  left: 50%;
-}
-
-.list ul li span.removeText:hover {
-  background-color: #edeef0;
 }

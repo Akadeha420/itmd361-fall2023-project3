@@ -56,31 +56,16 @@ const list = document.getElementById('todo')
 
 form.addEventListener('submit', function (e) {
   e.preventDefault()
-
   let todoList = document.createElement('li')
-
-  let todoListText = document.createElement('span')
-  todoListText.innerHTML = text.value
-
-  let remove = document.createElement('span')
-  remove.className = 'removeText'
-  remove.innerHTML = '\u00d7'
-
-  list.appendChild(todoList)
-  todoList.appendChild(todoListText)
-  todoList.appendChild(remove)
-
+  todoList.innerHTML = text.value
+  list.append(todoList)
   text.value = ''
-  
   reload()
 })
 
 list.addEventListener('click', function(e) {
-  if(e.target.tagName === "SPAN" && e.target.className === "removeText") {
-    e.target.parentNode.remove()
-  }
-  else if(e.target.tagName === "SPAN") {
-    e.target.classList.toggle('checked')
+  if(e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
     reload()
   }
 },false)

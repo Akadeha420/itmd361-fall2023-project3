@@ -12,7 +12,7 @@ function initMap() {
     title: 'My Favorite Vacation Place'
   });
 }
-window.onload = () => {
+window.addEventListener('DOMContentLoaded', () => {
   const ngapali = document.querySelector('.ngapali-visuals');
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
@@ -46,7 +46,7 @@ window.onload = () => {
   });
 
   pictureSlider(current)
-}
+})
 
 //To Do List
 const form = document.getElementById('form')

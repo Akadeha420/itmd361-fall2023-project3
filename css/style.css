@@ -71,6 +71,10 @@ section {
   cursor: pointer;
 }
 
+.profile-image img.change {
+  background-image: url(../images/profile2.jpeg);
+}
+
 .profile-text {
   align-self: center;
   text-align: center;

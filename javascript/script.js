@@ -1,5 +1,5 @@
 function initMap() {
-  const paradise = {lat: 18.3802694, lng: 94.3340317};
+  const paradise = { lat: 18.3802694, lng: 94.3340317 };
 
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
@@ -12,8 +12,7 @@ function initMap() {
     title: 'My Favorite Vacation Place'
   });
 }
-
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = () => {
   const ngapali = document.querySelector('.ngapali-visuals');
   const previous = document.getElementById('previous');
   const next = document.getElementById('next');
@@ -21,35 +20,35 @@ document.addEventListener('DOMContentLoaded', function () {
   let current = 0;
 
   function pictureSlider(index) {
-      if (index < 0) {
-          current = ngapali.children.length - 1;
-      } 
-      else if (index < ngapali.children.length) {
-          current = index;
-      } 
-      else {
-          current = 0;
-      }
+    if (index < 0) {
+      current = ngapali.children.length - 1;
+    }
+    else if (index < ngapali.children.length) {
+      current = index;
+    }
+    else {
+      current = 0;
+    }
 
-      for (let i = 0; i < ngapali.children.length; i++) {
-          ngapali.children[i].style.visibility = 'hidden';
-      }
-      ngapali.children[current].style.visibility = 'visible';
+    for (let i = 0; i < ngapali.children.length; i++) {
+      ngapali.children[i].style.visibility = 'hidden';
+    }
+    ngapali.children[current].style.visibility = 'visible';
 
   }
 
   previous.addEventListener('click', function () {
-      pictureSlider(current - 1);
+    pictureSlider(current - 1);
   });
 
   next.addEventListener('click', function () {
-      pictureSlider(current + 1);
+    pictureSlider(current + 1);
   });
 
   pictureSlider(current)
-})
+}
 
-// To Do List
+//To Do List
 const form = document.getElementById('form')
 const text = document.getElementById('tasks')
 const list = document.getElementById('todo')
@@ -71,19 +70,17 @@ form.addEventListener('submit', function (e) {
   todoList.appendChild(remove)
 
   text.value = ''
-  
-  reload()
+
 })
 
-list.addEventListener('click', function(e) {
-  if(e.target.tagName === "SPAN" && e.target.className === "removeText") {
+list.addEventListener('click', function (e) {
+  if (e.target.tagName === "SPAN" && e.target.className === "removeText") {
     e.target.parentNode.remove()
   }
-  else if(e.target.tagName === "SPAN") {
+  else if (e.target.tagName === "SPAN") {
     e.target.classList.toggle('checked')
-    reload()
   }
-},false)
+}, false)
 
 function reload() {
   localStorage.setItem('data', list.innerHTML)
@@ -92,22 +89,7 @@ function reload() {
 function save() {
   list.innerHTML = localStorage.getItem('data')
 }
+// save();
 
-save();
 
-// Profile Toggle
-const image = document.querySelector('#change')
-let toggle = true
-const source = "images/profile2.jpeg"
-const source2 = "images/IMG_6311.JPG"
-
-image.addEventListener('click', () => {
-  toggle = !toggle
-  if(toggle) {
-    image.src = source2
-  }
-  else {
-    image.src = source
-  }
-})
 

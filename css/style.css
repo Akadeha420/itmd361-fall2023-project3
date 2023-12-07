@@ -101,10 +101,12 @@ section {
   height: 25px;
   padding: 5px;
 }
+
 .about-info {
   padding-left: 60px;
   padding-right: 60px;
 }
+
 .job {
   padding-left: 30px;
   padding-right: 30px;
@@ -112,7 +114,8 @@ section {
 
 /* Origins CSS */
 
-#aboutme img, video {
+#aboutme img,
+video {
   height: 250px;
   width: 250px;
   border-radius: 10%;
@@ -127,6 +130,7 @@ section {
   display: flex;
   justify-content: center;
 }
+
 .games-visuals {
   display: flex;
   justify-content: center;
@@ -138,7 +142,7 @@ section {
   justify-content: center;
 }
 
-.ngapali-visuals img{
+.ngapali-visuals img {
   height: 250px;
   width: 250px;
 }
@@ -177,4 +181,18 @@ section {
 
 .list ul li span.removeText:hover {
   background-color: #edeef0;
+}
+
+@media(max-width: 800px) {
+  .section-container {
+    flex-direction: column;
+  }
+
+  .profile-image img {
+    display: none;
+  }
+
+  .ngapali-visuals img {
+    overflow: auto;
+  }
 }
